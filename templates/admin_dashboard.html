@@ -1,0 +1,26 @@
+{% extends "base.html"%} 
+
+{% block title%}
+<title>Fabevy|Admin</title>
+
+{% endblock title%}
+
+
+{% block content%}
+
+<a href="{{url_for('add_students')}}">Add Students</a>
+<table>
+   <tr> <th>No</th>
+    <th>ID</th>
+    <th>Name</th></tr>
+{% for row in datas%}
+<tr>
+    <td>{{loop.index}}</td>
+    <td>{{row.id}}</td>
+    <td><a href="{{url_for('student_details',id=row.ID)}}">{{row.username}}</a></td>
+    <td><a href="{{url_for('edit_students',id=row.id)}}">Edit</a></td>
+    <td><a href="{{url_for('delete_students',id=row.id)}}">Delete</a></td>
+{%endfor%}
+</table>
+{% endblock content%}
+

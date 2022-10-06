@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+{%block title%}
+<title>Student Details</title>
+{%endblock title%}
+
+{%block content%}
+
+<table class="stud_details">
+    <tr>
+        <th>Name</th><td class="colen">:</td>
+        <td>{{datas[0]['name']}}</td>
+    </tr>
+    <tr>
+        <th>Roll No</th><td class="colen">:</td>
+        <td>{{datas[0]['id']}}</td>
+    </tr>
+    <tr>
+        <th>Username</th><td class="colen">:</td>
+        <td>{{datas[0]['Username']}}</td>
+    </tr>
+    <tr>
+        <th>Number</th><td class="colen">:</td>
+        <td>{{datas[0]['Number']}}</td>
+    </tr>
+    <tr>
+        <th>Degree</th><td class="colen">:</td>
+        <td>{{datas[0]['Degree']}}</td>
+    </tr>
+</table>
+
+{%endblock content%}

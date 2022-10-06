@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{%block title%}
+<title>Edit Student Details</title>
+{%endblock title%}
+
+{%block content%}
+
+<h1>Edit Student Details</h1>
+<h5>{{datas.name}}</h5>
+
+<form action="" method="post">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value={{datas.name}}></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="username" value="{{datas.username}}"></td>
+         </tr>
+        <tr>
+            <td>Number</td>
+            <td><input type="number" name="number" value="{{datas.number}}"></td>
+         </tr>
+         <tr>
+            <td>Degree</td>
+            <td><input type="text" name="degree" value="{{datas.degree}}"></td>
+         </tr> 
+         <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+         </tr>  
+    </table>
+</form>
+
+{%endblock content%}

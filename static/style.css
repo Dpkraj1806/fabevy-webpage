@@ -1,0 +1,83 @@
+:root {
+    --fb-color-prim: #670099;
+    --fb-color-sec: #fff79a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fb-color-sec);
+}
+
+.login {
+    width: 250px;
+    height: 300px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: whitesmoke;
+}
+
+.login .logo img {
+    width: 50%;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login .login-form form {
+    /* top right bottom left*/
+    /* display: block; */
+    margin-top: 20px;
+}
+
+
+
+nav .nav_left {
+    display: inline-block;
+    margin-left: 0px;
+    align-items: center;
+}
+nav .nav_left a i{
+    width: 50px;
+}
+
+nav .nav_middle {
+    display: inline-block;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10px;
+}
+
+nav .nav_middle img {
+    width: 200px;
+}
+
+nav .nav_right {
+    display: inline-block;
+    margin-left: 95%;
+    margin-right: 0px;
+    width: 50px;
+}
+
+.login-form form input {
+    display: block;
+    margin: auto;
+}
+
+.stud_details th {
+    text-align: left;
+}
+
+.stud_details td {
+    text-align: left;
+}
+
+.stud_details .colen {
+    text-align: center;
+}
