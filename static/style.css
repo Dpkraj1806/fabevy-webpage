@@ -22,22 +22,6 @@ body {
     background-color: whitesmoke;
 }
 
-.login .logo img {
-    width: 50%;
-    display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.login .login-form form {
-    /* top right bottom left*/
-    /* display: block; */
-    margin-top: 20px;
-}
-
-
-
 nav .nav_left {
     display: inline-block;
     margin-left: 0px;
@@ -68,6 +52,11 @@ nav .nav_right {
 .login-form form input {
     display: block;
     margin: auto;
+}
+
+.login .err{
+    text-align: center;
+    color: red;
 }
 
 .stud_details th {

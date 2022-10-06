@@ -7,18 +7,31 @@ app=Flask(__name__)
 @app.route("/",methods=["GET","POST"])
 def login():
     if request.method=="POST":
-        fabevy_user=request.form['username']
-        user_password=request.form['password']
-        print(fabevy_user,user_password)         
-        return redirect("userdashboard")
+        user=request.form['username']
+        user_pass=request.form['password']
+        print(user,user_pass)
+        con=sql.connect("fabevy.db")
+        cur=con.cursor()
+        cur.execute("select * from userslogincredentials where username=?",(user,))
+        data=cur.fetchone()
+        if data:
+            if data[1]==user:
+                            if data[2]==user_pass:
+                                if data[3]=="developer":
+                                    return "developer"
+                                elif data[3]=="admin":
+                                  return redirect(url_for("admindashboard"))
+                                else:
+                                    return "Student"
+            else:
+                return render_template("login.html",error="Password Mismatch")
+        else:
+            return render_template("login.html",error="Username Not found")
     return render_template("login.html")
 
 @app.route("/user_dashboard")
 def userdashboard():
     return render_template("user_dashboard.html")
-
-
-
 
 @app.route("/admin",methods=["GET","POST"])
 def signup():
