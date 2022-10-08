@@ -106,6 +106,27 @@ def delete_students(id):
     con.commit()
     return render_template("admin_dashboard.html")     
 
+@app.route("/batches/<string:name>",)
+def batches(name):
+        con=sql.connect("fabevy.db")
+        cur=con.cursor()
+        cur.execute("select * from "+name)
+        data=cur.fetchall()
+        return render_template("batches.html",datas=data)
+
+@app.route("/createbatch",methods=["GET","POST"])
+def create_batch():
+    if request.method=="POST":
+        b_name=request.form["batchname"]
+        b_date=request.form["startdate"]
+        conn=sql.connect("fabevy.db")
+        cur=conn.cursor()
+        value="create table "+b_name+"(name char(20)  ,date char(20))"
+        cur.execute(value)
+        cur.execute("insert into "+b_name+" (name,date) values(?,?)",(b_name,b_date))
+        return render_template("admin_dashboard.html")
+    return render_template("createbatch.html")
+
 
 if __name__=="__main__":
     app.run(debug=True)

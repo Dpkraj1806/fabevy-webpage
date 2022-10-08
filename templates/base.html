@@ -12,19 +12,33 @@
     {% endblock title%}
 </head>
 <body>
-    <nav>
-        <div class="nav_left">
-            <a href=""><i class="fa-solid fa-bars"></i></a>
+
+    <!-- Head -->
+    <nav class="flex-div">
+        <div class="nav_left flex-div">
+            <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="nav_middle">
+        <div class="nav_middle flex-div">
                 <img src="../static/fabevy-logo-landscape.png">
         </div>
-        <div class="nav_right">
+        <div class="nav_right flex-div">
             <a href=""><i class="fa-solid fa-user"></i></a>
         </div>
     </nav>
+
+    <!-- Side bar -->
+<div class="side-bar">
+    <a href="{{url_for('batches')}}"><i class="fa-solid fa-screen-users"></i><p>Batches</p></a>
+    <a href="students"><p>Students</p></a>
+    <a href="#"><p>AAA</p></a>
+    <a href="#"><p>BBB</p></a>
+    <a href="#"><p>CCC</p></a>
+</div>
     
     {% block content%}
+
+
+
     {% endblock content%}
 </body>
 </html>

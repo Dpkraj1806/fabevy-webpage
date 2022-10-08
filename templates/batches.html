@@ -1,0 +1,20 @@
+{% extends "base.html"%} 
+
+{% block title%}
+<title>Fabevy|Admin</title>
+
+{% endblock title%}
+
+
+
+{%block content%}
+<div class="admin-section">
+    <h1>Batches</h1>
+    {% for row in datas%}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td><a href="{{url_for(batches),name=row.name}}">{{row.name}}</a></td>
+    {%endfor%}
+
+</div>
+{%endblock content%}

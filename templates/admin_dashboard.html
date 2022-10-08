@@ -6,8 +6,13 @@
 {% endblock title%}
 
 
-{% block content%}
 
+{% block content%}
+<div class="admin-section">
+    <!-- Create a new Batch -->
+<a href="{{url_for('create_batch')}}">Create batch</a>
+
+<!-- Add students -->
 <a href="{{url_for('add_students')}}">Add Students</a>
 <table>
    <tr> <th>No</th>
@@ -22,5 +27,6 @@
     <td><a href="{{url_for('delete_students',id=row.id)}}">Delete</a></td>
 {%endfor%}
 </table>
+</div>
 {% endblock content%}
 

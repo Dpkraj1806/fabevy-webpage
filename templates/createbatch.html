@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title%}
+
+<title>Create Batch</title>
+
+{% endblock title%}
+
+
+{% block content%}
+
+<form action="#" method="POST">
+    <label for="batchname">Batch Name</label>
+    <input type="text" name="batchname" value="" placeholder="Enter Batch Name"><br>
+    <label for="startdate">Starting Date</label>
+    <input type="date" name="startdate" value=""placeholder="Enter Starting Date"><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock content%}
